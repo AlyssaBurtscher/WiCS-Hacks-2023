@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WiCS Hacks 2023 Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title">
+        <br>
+        <br>
+        <label for="submission-time">Due Date:</label>
+        <input type="datetime-local" id="submission-time" name="submission-time" value="2023-02-12T19:30" min="2018-06-07T00:00" max="2023-06-14T00:00">
+        <br>
+        <br>
+        <button type="button" onclick="submit()">Submit</button>
+        <br>
+        <br>
+        <button type="button" onclick="back()">Go Back</button>
+        <input type="number" id="number" name="number">
+        <select id="assignment">
+            <option value="Select" selected>Select Assignment Type</option>
+            <option value="Pages">Pages</option>
+            <option value="Paragraphs">Paragraphs</option>
+            <option value="Words">Words</option>
+            <option value="Characters">Characters</option>
+        </select>
+    </body>
+</html>
