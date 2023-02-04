@@ -3,7 +3,25 @@ function one(){
     let user = true
     let newAssignments = new Map();
     while(user) {
-        
+        let name = prompt("Name of assignment: ");
+        let dueDate = prompt("Date due: ");
+        let assignment = prompt("Type of assignment: ");
+        switch(assignment) {
+            case "Essay":
+                let words = Numbers(prompt("Number of words: "));
+                let revisions = Numbers(prompt("Number of revisions: "));
+                newAssignments.set(name, new essay(0, dueDate, words, revisions));
+                break;
+            case "Quiz":
+                let studyTime = Numbers(prompt("Time to study: "));
+                let quizLength = Numbers(prompt("Length of quiz: "));
+                newAssignments.set(name, new quiz(0, dueDate, studyTime, quizLength));
+                break;
+            case "Problem Set":
+                let numProblems = Numbers(prompt("Time to study: "));
+                newAssignments.set(name, new problems(0, dueDate, numProblems));
+                break;
+        }
     }
 }
 class assignment{
