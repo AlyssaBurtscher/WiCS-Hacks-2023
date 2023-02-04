@@ -1,5 +1,10 @@
 function one(){
     console.log("Hi");
+    let user = true
+    let newAssignments = new Map();
+    while(user) {
+        
+    }
 }
 class assignment{
     constructor(percentDone, name, dueDate){
@@ -8,7 +13,11 @@ class assignment{
     }
     
     completed() {
-        percentDone == 100;
+        return percentDone == 100;
+    }
+    
+    getPercentage() {
+        return percentDone;
     }
 }
 
@@ -19,10 +28,6 @@ class essay extends assignment{
         wordsWritten = 0.0;
         this.revisions = revisions;
         revisionsDone = 0.0;
-    }
-    
-    getPercentage() {
-        return percentDone;
     }
     
     getWordsDone() {
@@ -53,10 +58,6 @@ class quiz extends assignment{
         studyDone = 0.0;
     }
     
-    getPercentage() {
-        return percentDone;
-    }
-    
     getLengthOfQuiz() {
         return lengthOfQuiz;
     }
@@ -73,16 +74,16 @@ class problems extends assignment{
         problemsDone = 0.0;
     }
     
-    getPercentage() {
-        return percentDone;
-    }
-    
     getnumProblems() {
         return numProblems;
     }
     
     getProblemsDone() {
         return problemsDone;
+    }
+    
+    changeProblemsDone() {
+        problemsDone++;
     }
     
     tracking() {
