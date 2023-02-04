@@ -31,6 +31,10 @@ class ImplementAssignments{
         obj = Object.fromEntries(map);
         jsonString = JSON.stringify(obj.toString());
     }
+    
+    toString() {
+        return jsonString;
+    }
 }
 
 class assignment{
