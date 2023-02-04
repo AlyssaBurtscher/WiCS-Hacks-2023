@@ -43,8 +43,16 @@ class assignment{
         return percentDone;
     }
     
+    getName() {
+        return name;
+    }
+    
     tracking() {
         percentDone = 100;
+    }
+    
+    toString() {
+        return "Title: " + name + "\nDue Date: " + dueDate + "\nPercent Done: " + percentDone;
     }
 }
 
@@ -76,6 +84,11 @@ class essay extends assignment{
     tracking() {
         percentDone = ((wordsWritten / words) * 80) + ((revisionsDone / revisions) * 20);
     }
+    
+    toString() {
+        return super.toString() + "\nWords Written: " + wordsWritten + "\nRequired Word Count: " + words + "\nRevisions Done: " + revisionsDone 
+                                + "\nRevisions Required: " + revisions;
+    }
 }
 
 class quiz extends assignment{
@@ -91,6 +104,10 @@ class quiz extends assignment{
     
     tracking() {
         percentDone = (studyDone / studyTime) * 100;
+    }
+    
+    toString() {
+        return super.toString() + "\nTime Studied: " + studyDone + "\nTotal Time To Study: " + studyTime + "\nLength of Quiz: " + lengthOfQuiz;
     }
 }
 
@@ -115,5 +132,9 @@ class problems extends assignment{
     
     tracking() {
         percentDone = (problemsDone / numProblems) * 100;
+    }
+    
+    toString() {
+        return super.toString() + "\nProblems Completed: " + problemsDone + "\nTotal Number of Problems: " + numProblems;
     }
 }
