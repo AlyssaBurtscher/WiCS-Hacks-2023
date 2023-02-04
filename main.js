@@ -21,6 +21,11 @@ function one(){
                 let numProblems = Numbers(prompt("Time to study: "));
                 newAssignments.set(name, new problems(0, dueDate, numProblems));
                 break;
+            case "Task":
+                let numProblems = Numbers(prompt("Time to study: "));
+                newAssignments.set(name, new problems(0, dueDate));
+                break;
+               
         }
     }
 }
@@ -36,6 +41,10 @@ class assignment{
     
     getPercentage() {
         return percentDone;
+    }
+    
+    tracking() {
+        percentDone = 100;
     }
 }
 
@@ -53,7 +62,7 @@ class essay extends assignment{
     }
     
     wordsAdded(numWordsAdded) {
-        wordsWritten += numWordsAdded;
+        wordsWritten = numWordsAdded;
     }
     
     getRevisionsDone() {
@@ -65,7 +74,7 @@ class essay extends assignment{
     }
     
     tracking() {
-        percentDone = ((wordsWritten / words) * 80) + ((revisionsDone / revisions) * 20)
+        percentDone = ((wordsWritten / words) * 80) + ((revisionsDone / revisions) * 20);
     }
 }
 
