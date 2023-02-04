@@ -11,20 +11,22 @@
         <br>
         <br>
         <label for="submission-time">Due Date:</label>
-        <input type="datetime-local" id="submission-time" name="submission-time" value="2023-02-12T19:30" min="2018-06-07T00:00" max="2023-06-14T00:00">
+        <input type="datetime-local" id="submission-time" name="submission-time" value="2023-02-05T23:59" min="2023-02-04T00:00" max="2026-06-14T00:00">
+        <br>
+        <br>
+        <select id="essay-requirement">
+            <option value="Select" selected>Select Essay Requirement</option>
+            <option value="Pages">Page Count</option>
+            <option value="Paragraphs">Paragraph Count</option>
+            <option value="Words">Word Count</option>
+            <option value="Characters">Character Count</option>
+        </select>
+        <input type="number" id="number" name="number">
         <br>
         <br>
         <button type="button" onclick="submit()">Submit</button>
         <br>
         <br>
         <button type="button" onclick="back()">Go Back</button>
-        <input type="number" id="number" name="number">
-        <select id="assignment">
-            <option value="Select" selected>Select Assignment Type</option>
-            <option value="Pages">Pages</option>
-            <option value="Paragraphs">Paragraphs</option>
-            <option value="Words">Words</option>
-            <option value="Characters">Characters</option>
-        </select>
     </body>
 </html>
