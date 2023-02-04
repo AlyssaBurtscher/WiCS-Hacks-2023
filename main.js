@@ -22,7 +22,6 @@ function one(){
                 newAssignments.set(name, new problems(0, dueDate, numProblems));
                 break;
             case "Task":
-                let numProblems = Numbers(prompt("Time to study: "));
                 newAssignments.set(name, new problems(0, dueDate));
                 break;
                
