@@ -18,3 +18,8 @@ function one(){
 function back(){
     window.location.href = "index.html";
 }
+
+function submit(){
+    var title = document.getElementById("Title").value;
+    var dueDate = document.getElementById("dueDate").value;
+}
