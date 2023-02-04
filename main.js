@@ -10,19 +10,19 @@ function one(){
             case "Essay":
                 let words = Numbers(prompt("Number of words: "));
                 let revisions = Numbers(prompt("Number of revisions: "));
-                newAssignments.set(name, new essay(0, dueDate, words, revisions));
+                newAssignments.set(name, new essay(0, name, dueDate, words, revisions));
                 break;
             case "Quiz":
                 let studyTime = Numbers(prompt("Time to study: "));
                 let quizLength = Numbers(prompt("Length of quiz: "));
-                newAssignments.set(name, new quiz(0, dueDate, studyTime, quizLength));
+                newAssignments.set(name, new quiz(0, name, dueDate, studyTime, quizLength));
                 break;
             case "Problem Set":
                 let numProblems = Numbers(prompt("Time to study: "));
-                newAssignments.set(name, new problems(0, dueDate, numProblems));
+                newAssignments.set(name, new problems(0, name, dueDate, numProblems));
                 break;
             case "Task":
-                newAssignments.set(name, new problems(0, dueDate));
+                newAssignments.set(name, new problems(0, name, dueDate));
                 break;
                
         }
@@ -31,6 +31,7 @@ function one(){
 class assignment{
     constructor(percentDone, name, dueDate){
         this.percentDone = percentDone;
+        this.name = name;
         this.dueDate = dueDate;
     }
     
@@ -48,8 +49,8 @@ class assignment{
 }
 
 class essay extends assignment{
-    constructor(percentDone, dueDate, words, revisions){
-        super(percentDone, dueDate);
+    constructor(percentDone, name, dueDate, words, revisions){
+        super(percentDone, name, dueDate);
         this.words = words;
         wordsWritten = 0.0;
         this.revisions = revisions;
@@ -78,8 +79,8 @@ class essay extends assignment{
 }
 
 class quiz extends assignment{
-    constructor(percentDone, dueDate, studyTime, lengthOfQuiz){
-        super(percentDone, dueDate);
+    constructor(percentDone, name, dueDate, studyTime, lengthOfQuiz){
+        super(percentDone, name, dueDate);
         this.studyTime = studyTime;
         studyDone = 0.0;
     }
@@ -94,8 +95,8 @@ class quiz extends assignment{
 }
 
 class problems extends assignment{
-    constructor(percentDone, dueDate, numProblems){
-        super(percentDone, dueDate);
+    constructor(percentDone, name, dueDate, numProblems){
+        super(percentDone, name, dueDate);
         this.numProblems = numProblems;
         problemsDone = 0.0;
     }
