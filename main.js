@@ -11,7 +11,7 @@ function one(){
              
     }
     else if (value == "Problems") {
-             
+        window.location.href = "problems.html";   
     } 
 }
 

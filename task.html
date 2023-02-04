@@ -6,10 +6,12 @@
         <script src="main.js"></script>
     </head>
     <body>
-        <h2>Title</h2>
-        <input type="text" id="Title">
-        <h2>Due Date</h2>
-        <input type="date" id="start" name="trip-start" value="2023-02-05" min="2023-01-01" max="2024-12-31">
+        <label for="Title">Title:</label>
+        <input type="text" id="Title" name="Title">
+        <br>
+        <br>
+        <label for="meeting-time">Due Date:</label>
+        <input type="datetime-local" id="meeting-time" name="meeting-time" value="2018-06-12T19:30" min="2018-06-07T00:00" max="2018-06-14T00:00">
         <br>
         <br>
         <button type="button" onclick="submit()">Submit</button>
