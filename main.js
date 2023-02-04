@@ -1,11 +1,14 @@
 function one(){
     console.log("Hi");
-    let user = true
-    let newAssignments = new Map();
-    while(user) {
-        let name = prompt("Name of assignment: ");
-        let dueDate = prompt("Date due: ");
-        let assignment = prompt("Type of assignment: ");
+}
+class ImplementAssignments{
+    constructor() {
+        let newAssignments = new Map();
+        var obj = Object.fromEntries(map);
+        var jsonString = JSON.stringify(obj);
+    }
+    
+    addAssignment() {
         switch(assignment) {
             case "Essay":
                 let words = Numbers(prompt("Number of words: "));
@@ -24,12 +27,14 @@ function one(){
             case "Task":
                 newAssignments.set(name, new problems(0, name, dueDate));
                 break;
-               
         }
+        obj = Object.fromEntries(map);
+        jsonString = JSON.stringify(obj.toString());
     }
 }
+
 class assignment{
-    constructor(percentDone, name, dueDate){
+    constructor(percentDone, name, dueDate) {
         this.percentDone = percentDone;
         this.name = name;
         this.dueDate = dueDate;
