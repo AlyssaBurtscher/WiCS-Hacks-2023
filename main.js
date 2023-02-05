@@ -61,7 +61,7 @@ class assignment{
     }
     
     toString() {
-        return "Title: " + name + "\nDue Date: " + dueDate + "\nPercent Done: " + percentDone;
+        return "\nTitle: " + name + "\nDue Date: " + dueDate + "\nPercent Done: " + percentDone;
     }
 }
 
