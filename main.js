@@ -54,6 +54,8 @@ function back(){
 function submit(){
     var title = document.getElementById("Title").value;
     var dueDate = document.getElementById("dueDate").value;
+    var assignment = new assignment(0, title, dueDate);
+    assignments.push(assignment.getName() + " " + assignment.getDueDate());
 }
 
 function load(){
@@ -149,6 +151,10 @@ class assignment{
     
     tracking() {
         percentDone = 100;
+    }
+    
+    getDueDate() {
+        return dueDate;
     }
     
     toString() {
