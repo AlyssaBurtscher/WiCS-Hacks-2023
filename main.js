@@ -90,6 +90,10 @@ class essay extends assignment{
         revisionsDone++;
     }
     
+    getMaxRevisions() {
+        return revisions;
+    }
+    
     tracking() {
         percentDone = ((wordsWritten / words) * 80) + ((revisionsDone / revisions) * 20);
     }
@@ -109,6 +113,14 @@ class quiz extends assignment{
     
     getLengthOfQuiz() {
         return lengthOfQuiz;
+    }
+    
+    getTimeStudies() {
+        return studyDone;
+    }
+    
+    increaseTimeStudied(int addTime) {
+        studyDone += addTime;
     }
     
     tracking() {
