@@ -168,10 +168,10 @@ function one(){
         window.location.href = "task.html";
     }
     else if (value == "Quiz") {
-             
+        window.location.href = "quiz.html";     
     }
     else if (value == "Essay") {
-             
+        window.location.href = "essays.html";     
     }
     else if (value == "Problems") {
         window.location.href = "problems.html";   
