@@ -171,7 +171,9 @@ function one(){
         window.location.href = "quiz.html";     
     }
     else if (value == "Essay") {
-        window.location.href = "essays.html";     
+
+        window.location.href = "essay.html";
+
     }
     else if (value == "Problems") {
         window.location.href = "problems.html";   
@@ -185,14 +187,14 @@ var x =0;
 function submitp(){
     pushes++;
     console.log(pushes);
-    x = document.getElementById("Questions").value;
     console.log(x);
     let hundred = 100;
     let percentage = 100/x;
     if(pushes<=x){
         //add percentage to 0
         y = y+percentage;
-        if(y>99){
+        y = Math.round(y);
+        if(y>98.999){
             y=100;
             console.log("congrats, you're done!");
 
@@ -202,12 +204,30 @@ function submitp(){
     document.getElementById("objectId").innerHTML = y + "% done";
 
 }
-
+function save(){
+    x = document.getElementById("Questions").value;
+}
+var g=0;
+function savee(){
+    g = document.getElementById("Essay").value;
+}
 function reset(){
     pushes = 0;
     x = 0;
     y=0;
+    document.getElementById("objectId").innerHTML = y + "% done";
+
 }
+var revisions = 0;
+var wordse = 5;
+function submite(){
+    revisions++;
+    document.getElementById("Revisions").innerHTML = revisions + " revisions";
+    console.log("revision made");
+    document.getElementById("Word Count").innerHTML = "Word Count:" + wordse;
+
+}
+
 
 function back(){
     window.location.href = "index.html";
