@@ -1,5 +1,37 @@
 var assignments = ["One", "Two", "Three"];
 
+class assignment (){
+    constructor(percentDone, name, dueDate) {
+        this.percentDone = percentDone;
+        this.name = name;
+        this.dueDate = dueDate;
+    }
+    
+    completed() {
+        return percentDone == 100;
+    }
+    
+    getPercentage() {
+        return percentDone;
+    }
+    
+    getName() {
+        return name;
+    }
+    
+    tracking() {
+        percentDone = 100;
+    }
+    
+    getDueDate() {
+        return dueDate;
+    }
+    
+    toString() {
+        return "\nTitle: " + name + "\nDue Date: " + dueDate + "\nPercent Done: " + percentDone;
+    }
+};
+
 function one(){
     var e = document.getElementById("assignment");
     var value = e.value;

@@ -1,4 +1,4 @@
-export class ImplementAssignments{
+class ImplementAssignments{
     constructor() {
         let newAssignments = new Map();
         var obj = Object.fromEntries(map);
@@ -34,7 +34,7 @@ export class ImplementAssignments{
     }
 }
 
-export class assignment{
+class assignment{
     constructor(percentDone, name, dueDate) {
         this.percentDone = percentDone;
         this.name = name;
@@ -120,7 +120,7 @@ class quiz extends assignment{
         return studyDone;
     }
     
-    increaseTimeStudied(var addTime) {
+    increaseTimeStudied(addTime) {
         studyDone += addTime;
     }
     
