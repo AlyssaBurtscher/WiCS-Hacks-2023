@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="style.css">
         <script src="main.js"></script>
     </head>
-    <body>
+    <body onload="load()">
         <select id="assignment">
             <option value="Select" selected>Select Assignment Type</option>
             <option value="Task">Task</option>
@@ -17,6 +17,8 @@
         <button type="button" onclick="one()">Add Assignment</button>
         <br>
         <h1>Assignment Todo List</h1>
-        <p>Text goes here.</p>
+        <dt id="list"></dt>
+        <br>
+        <button type="button" onclick="update()">Update</button>
     </body>
 </html>
