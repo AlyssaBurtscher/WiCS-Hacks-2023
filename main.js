@@ -30,23 +30,19 @@ function submit(){
 function load(){
     var list = document.getElementById('list');
     for (var i = 0; i < assignments.length; i++){
-        /*var firstname = assignments[i];
-        var entry = document.createElement('li');
-        entry.appendChild(document.createTextNode(firstname));
-        list.appendChild(entry);
-        console.log("Working");*/
-        
         var label = document.createElement("label");
         var checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.id = "check" + i;
         var description = document.createTextNode(assignments[i]);
-        description.id = "lable" + i;
+        label.id = "label" + i;
 
         label.appendChild(checkbox);
         label.appendChild(description);
         list.appendChild(label);
-        list.appendChild(document.createElement("br"));
+        var br = document.createElement("br");
+        br.id = "br" + i;
+        list.appendChild(br);
     }
 }
 
@@ -57,10 +53,9 @@ function update(){
         if (!x.checked){
             temp.push(assignments[i]);
         }
-        x.remove();
-        document.getElementById('lable' + i).remove();
+        document.getElementById('label' + i).remove();
+        document.getElementById('br' + i).remove();
     }
-    
     assignments = temp;
     load();
 }
