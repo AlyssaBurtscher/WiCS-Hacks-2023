@@ -1,11 +1,42 @@
 var assignments = ["One", "Two", "Three"];
 
+class assignment (){
+    constructor(percentDone, name, dueDate) {
+        this.percentDone = percentDone;
+        this.name = name;
+        this.dueDate = dueDate;
+    }
+    
+    completed() {
+        return percentDone == 100;
+    }
+    
+    getPercentage() {
+        return percentDone;
+    }
+    
+    getName() {
+        return name;
+    }
+    
+    tracking() {
+        percentDone = 100;
+    }
+    
+    getDueDate() {
+        return dueDate;
+    }
+    
+    toString() {
+        return "\nTitle: " + name + "\nDue Date: " + dueDate + "\nPercent Done: " + percentDone;
+    }
+};
+
 function one(){
     var e = document.getElementById("assignment");
     var value = e.value;
     if (value == "Task"){
         window.location.href = "task.html";
-        date();
     }
     else if (value == "Quiz") {
              
@@ -17,6 +48,7 @@ function one(){
         window.location.href = "problems.html";   
     } 
 }
+
 var pushes = 0;
 var y = 0;
 var x =0;
@@ -54,6 +86,9 @@ function back(){
 function submit(){
     var title = document.getElementById("Title").value;
     var dueDate = document.getElementById("dueDate").value;
+    //import {assignment} from './classesFile.js';
+    var assignment = new assignment(0, title, dueDate);
+    assignments.push(assignment.getName() + " " + assignment.getDueDate());
 }
 
 function load(){
